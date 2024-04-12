@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Libertadores</title>
+</head>
+<body>
+
+<h1>Campeões da Libertadores da América</h1>
+
+<table border="1">
+    <thead>
+    <tr>
+        <th>Clube</th>
+        <th>Ano</th>
+        <th>Rei da América</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="campeao : ${campeoes}">
+        <td th:text="${campeao.clube}"></td>
+        <td th:text="${campeao.ano}"></td>
+        <td th:text="${campeao.reiDaAmerica}"></td>
+    </tr>
+    </tbody>
+</table>
+
+</body>
+</html>
